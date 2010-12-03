@@ -1,7 +1,7 @@
 (defpackage :com.gigamonkeys.shoutcast-system (:use :asdf :cl))
 (in-package :com.gigamonkeys.shoutcast-system)
 
-(require :aserve)
+#+allegro(require :aserve)
 
 (defsystem shoutcast
   :name "shoutcast"

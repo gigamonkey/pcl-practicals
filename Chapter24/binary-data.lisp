@@ -4,10 +4,10 @@
 
 (defconstant +null+ (code-char 0))
 
-(defgeneric read-value (type stream &key)
+(defgeneric read-value (type stream &key &allow-other-keys)
   (:documentation "Read a value of the given type from the stream."))
 
-(defgeneric write-value (type stream value &key)
+(defgeneric write-value (type stream value &key &allow-other-keys)
   (:documentation "Write a value as the given type to the stream."))
 
 (defgeneric read-object (object stream)
@@ -18,12 +18,12 @@
   (:method-combination progn :most-specific-last)
   (:documentation "Write out the slots of object to the stream."))
 
-(defmethod read-value ((type symbol) stream &key)
+(defmethod read-value ((type symbol) stream &key &allow-other-keys)
   (let ((object (make-instance type)))
     (read-object object stream)
     object))
 
-(defmethod write-value ((type symbol) stream value &key)
+(defmethod write-value ((type symbol) stream value &key &allow-other-keys)
   (assert (typep value type))
   (write-object value stream))
 

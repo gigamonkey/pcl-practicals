@@ -1,7 +1,7 @@
 (defpackage :com.gigamonkeys.url-function-system (:use :asdf :cl))
 (in-package :com.gigamonkeys.url-function-system)
 
-(require :aserve)
+#+allegro(require :aserve)
 
 (defsystem url-function
   :name "url-function"
@@ -14,6 +14,6 @@
   :components
   ((:file "packages")
    (:file "html-infrastructure" :depends-on ("packages")))
-  :depends-on (:html :macro-utilities))
+  :depends-on (:html :macro-utilities :aserve))
 
         

@@ -1,7 +1,7 @@
 ;;; This file contains the demonstration code used in Chapter 26. This
 ;;; file is not loaded as part of the url-function system.
 
-(require :aserve)
+#+allegro(require :aserve)
 
 (defpackage :com.gigamonkeys.web
   (:use :cl :net.aserve :com.gigamonkeys.html :com.gigamonkeys.url-function))

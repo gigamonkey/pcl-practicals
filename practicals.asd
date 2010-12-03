@@ -1,7 +1,7 @@
 (defpackage :com.gigamonkeys.practicals-system (:use :asdf :cl))
 (in-package :com.gigamonkeys.practicals-system)
 
-(require :aserve)
+#+allegro(require :aserve)
 
 (defsystem practicals
     :name "practicals"
