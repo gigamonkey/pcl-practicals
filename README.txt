@@ -1,3 +1,9 @@
+[Note: the text below is the README that came with the practicals I
+distributed when PCL was published in 2005. I'm hoping to update a few
+things to allow this code to run in a more modern environment. At some
+point I'll update this README.]
+
+
 This directory contains the source code for _Practical Common Lisp_.
 You may use and redestribute this software according to the terms of
 the license in file LICENSE.
